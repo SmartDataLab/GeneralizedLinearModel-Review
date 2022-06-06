@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.13.3/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@6.7.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.13.3"></script><script>(getMarkmap => {
+        window.WebFontConfig = {
+          custom: {
+            families: ['KaTeX_AMS', 'KaTeX_Caligraphic:n4,n7', 'KaTeX_Fraktur:n4,n7', 'KaTeX_Main:n4,n7,i4,i7', 'KaTeX_Math:i4,i7', 'KaTeX_Script', 'KaTeX_SansSerif:n4,n7,i4', 'KaTeX_Size1', 'KaTeX_Size2', 'KaTeX_Size3', 'KaTeX_Size4', 'KaTeX_Typewriter']
+          },
+          active: () => {
+            getMarkmap().refreshHook.call();
+          }
+        };
+      })(() => window.markmap)</script><script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js" defer></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.13.3/dist/index.umd.min.js"></script><script>(r => {
+                setTimeout(r);
+              })(() => {
+  const {
+    markmap,
+    mm
+  } = window;
+  const toolbar = new markmap.Toolbar();
+  toolbar.attach(mm);
+  const el = toolbar.render();
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root, jsonOptions) => {
+        const markmap = getMarkmap();
+        window.mm = markmap.Markmap.create('svg#mindmap', (getOptions || markmap.deriveOptions)(jsonOptions), root);
+      })(() => window.markmap,null,{"type":"heading","depth":1,"payload":{"lines":[0,1]},"content":"GeneralizedLinearModel-Review","children":[{"type":"heading","depth":2,"payload":{"lines":[2,3]},"content":"提纲","children":[{"type":"list_item","depth":4,"payload":{"lines":[4,5]},"content":"第一章 线性模型的统计推断","children":[{"type":"list_item","depth":6,"payload":{"lines":[5,6]},"content":"error structure"},{"type":"list_item","depth":6,"payload":{"lines":[6,7]},"content":"systematic component"},{"type":"list_item","depth":6,"payload":{"lines":[7,8]},"content":"parameter estimation of beta"},{"type":"list_item","depth":6,"payload":{"lines":[8,9]},"content":"the rank of the design matrix"},{"type":"list_item","depth":6,"payload":{"lines":[9,10]},"content":"properties of the OLS estimate","children":[{"type":"list_item","depth":8,"payload":{"lines":[10,11]},"content":"moments equivalence, distribution"}]},{"type":"list_item","depth":6,"payload":{"lines":[11,12]},"content":"estimable functions"},{"type":"list_item","depth":6,"payload":{"lines":[12,13]},"content":"estimation of <span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mi>s</mi><mi>i</mi><mi>g</mi><mi>m</mi><msup><mi>a</mi><mn>2</mn></msup></mrow><annotation encoding=\"application/x-tex\">sigma^2</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:1.0085em;vertical-align:-0.1944em;\"></span><span class=\"mord mathnormal\">s</span><span class=\"mord mathnormal\">i</span><span class=\"mord mathnormal\" style=\"margin-right:0.03588em;\">g</span><span class=\"mord mathnormal\">m</span><span class=\"mord\"><span class=\"mord mathnormal\">a</span><span class=\"msupsub\"><span class=\"vlist-t\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.8141em;\"><span style=\"top:-3.063em;margin-right:0.05em;\"><span class=\"pstrut\" style=\"height:2.7em;\"></span><span class=\"sizing reset-size6 size3 mtight\"><span class=\"mord mtight\">2</span></span></span></span></span></span></span></span></span></span></span>"}]},{"type":"list_item","depth":4,"payload":{"lines":[13,14]},"content":"第二章 广义线性模型的指数族分布","children":[{"type":"list_item","depth":6,"payload":{"lines":[14,15]},"content":"GLM组成","children":[{"type":"list_item","depth":8,"payload":{"lines":[15,16]},"content":"random component"},{"type":"list_item","depth":8,"payload":{"lines":[16,17]},"content":"link function"},{"type":"list_item","depth":8,"payload":{"lines":[17,18]},"content":"systematic predictor"}]},{"type":"list_item","depth":6,"payload":{"lines":[18,19]},"content":"指数分布族简介与GLM联系"},{"type":"list_item","depth":6,"payload":{"lines":[19,20]},"content":"GLM setup","children":[{"type":"list_item","depth":8,"payload":{"lines":[20,21]},"content":"<img src=\"figure/GLM_setup.png\" alt=\"\">"},{"type":"list_item","depth":8,"payload":{"lines":[21,22]},"content":"判断<span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mi mathvariant=\"normal\">Φ</mi></mrow><annotation encoding=\"application/x-tex\">\\Phi</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:0.6833em;\"></span><span class=\"mord\">Φ</span></span></span></span>是否已知和固定：固定则为指数分布族"}]},{"type":"list_item","depth":6,"payload":{"lines":[22,23]},"content":"GLM退化为线性模型的情形","children":[{"type":"list_item","depth":8,"payload":{"lines":[23,24]},"content":"<img src=\"figure/Linear_Model_as_GLM.png\" alt=\"\">"}]},{"type":"list_item","depth":6,"payload":{"lines":[24,25]},"content":"目标标量<span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mi>Y</mi></mrow><annotation encoding=\"application/x-tex\">Y</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:0.6833em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.22222em;\">Y</span></span></span></span>的各种结果","children":[{"type":"list_item","depth":8,"payload":{"lines":[25,26]},"content":"Mean and Variance","children":[{"type":"list_item","depth":10,"payload":{"lines":[26,27]},"content":"<img src=\"figure/Y_mean_variance.png\" alt=\"\">"}]},{"type":"list_item","depth":8,"payload":{"lines":[27,28]},"content":"Likelihood function","children":[{"type":"list_item","depth":10,"payload":{"lines":[28,29]},"content":"<img src=\"figure/Y_likelihood.png\" alt=\"\">"}]},{"type":"list_item","depth":8,"payload":{"lines":[29,30]},"content":"derivative of log-likelihood","children":[{"type":"list_item","depth":10,"payload":{"lines":[30,31]},"content":"<img src=\"figure/Y_der_log_likelihood.png\" alt=\"\">"}]}]},{"type":"list_item","depth":6,"payload":{"lines":[31,32]},"content":"link function and canoical link","children":[{"type":"list_item","depth":8,"payload":{"lines":[32,33]},"content":"<img src=\"figure/canonical_link.png\" alt=\"\">"}]}]},{"type":"list_item","depth":4,"payload":{"lines":[33,34]},"content":"第三章 指数族分布的统计推断","children":[{"type":"list_item","depth":6,"payload":{"lines":[34,35]},"content":"参数估计 <span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mi>β</mi></mrow><annotation encoding=\"application/x-tex\">\\beta</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:0.8889em;vertical-align:-0.1944em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.05278em;\">β</span></span></span></span>","children":[{"type":"list_item","depth":8,"payload":{"lines":[35,36]},"content":"最大似然 <img src=\"figure/max_likelihood_for_estimation.png\" alt=\"\">"},{"type":"list_item","depth":8,"payload":{"lines":[36,37]},"content":"score function以及表达式变换","children":[{"type":"list_item","depth":10,"payload":{"lines":[37,38]},"content":"<img src=\"figure/3_score_function_and_transformation.png\" alt=\"\">"},{"type":"list_item","depth":10,"payload":{"lines":[38,39]},"content":"<img src=\"figure/3_matrix_notation.png\" alt=\"\">"}]},{"type":"list_item","depth":8,"payload":{"lines":[39,40]},"content":"使用加权最小二乘估计求解IWLS","children":[{"type":"list_item","depth":10,"payload":{"lines":[40,41]},"content":"<img src=\"figure/3_IWLS.png\" alt=\"\">"}]},{"type":"list_item","depth":8,"payload":{"lines":[41,42]},"content":"使用Fisher scoring（NR方法）"}]}]},{"type":"list_item","depth":4,"payload":{"lines":[42,43]},"content":"第四章 二项分布的统计推断"},{"type":"list_item","depth":4,"payload":{"lines":[43,44]},"content":"第五章 泊松分布的统计推断"},{"type":"list_item","depth":4,"payload":{"lines":[44,45]},"content":"第六章 偏大离差的统计推断"},{"type":"list_item","depth":4,"payload":{"lines":[45,46]},"content":"第七章 伪似然估计及其统计推断"}]},{"type":"heading","depth":2,"payload":{"lines":[47,48]},"content":"课堂代码练习"},{"type":"heading","depth":2,"payload":{"lines":[49,50]},"content":"习题"}]},{})</script>
+</body>
+</html>
